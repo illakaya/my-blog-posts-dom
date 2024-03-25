@@ -35,6 +35,6 @@ submitBtn.addEventListener(`click`, function (event) {
     // update the local storage with new array
     updateBlogPosts();
 
-    // replaces the current page with the blog page
+    // replaces the current page with the blog page.
     window.location.replace(`blog.html`);
 })
