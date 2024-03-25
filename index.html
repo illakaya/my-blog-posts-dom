@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+</head>
+<body>
+    <!-- create a header bar that has a nav bar and button for light/dark mode -->
+    <header>
+        <div id="navbar">
+            <ul>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Create New Post</a></li>
+            </ul>
+            <button id="light-mode">☀️</button>
+        </div>
+    </header>
+    <!-- Create a div to carry the circle with the heading "Personal Blog" -->
+    <div>
+        <h1>Personal Blog</h1>
+    </div>
+    <!-- Creat main part of the page where the user can enter their thoughts for the day to be stored locally -->
+    <main>
+        <h2>What's on your mind?</h2>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username">
+            <label for="title">Title</label>
+            <input type="text" id="title">
+            <label for="content">Content</label>
+            <textarea name="content" id="content"></textarea>
+            <button id="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>Made with 💚 by Mimi Nguyen</p>
+        <p>&copy 2024</p>
+    </footer>
+</body>
+</html>
