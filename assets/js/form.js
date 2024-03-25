@@ -36,6 +36,6 @@ submitBtn.addEventListener(`click`, function (event) {
     updateBlogPosts();
 
     // replaces the current page with the blog page.
-    window.location.replace(`blog.html`);
+    // window.location.replace(`blog.html`);
     // trying to push the files up to github
 })
