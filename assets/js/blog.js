@@ -19,14 +19,14 @@ function renderBlogPosts() {
         const div = document.createElement('div');
         // div.textContent = JSON.stringify(post);
         
-        const h1 = document.createElement(`h1`);
+        const h2 = document.createElement(`h2`);
         const p = document.createElement('p');
         const span = document.createElement(`span`);
-        h1.textContent = title;
+        h2.textContent = title;
         p.textContent = content;
         span.textContent = `Posted by: ` + user;
 
-        div.appendChild(h1);
+        div.appendChild(h2);
         div.appendChild(p);
         div.appendChild(span);
         blogPost.appendChild(div);

@@ -33,8 +33,8 @@ submitBtn.addEventListener(`click`, function (event) {
         alert(`Please ensure all inputs are filled`);
         return;
     }
-    // push the blog object to the blogStorageObject array
-    blogStorageObject.push({
+    // push the blog object to the blogStorageObject array into the first position so that the latest blog post displays first
+    blogStorageObject.unshift({
         username: userTemp,
         title: titleTemp,
         content: contentTemp,
