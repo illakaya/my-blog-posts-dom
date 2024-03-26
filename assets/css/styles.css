@@ -1,7 +1,155 @@
-/* body {
-
+/* Introduce web application colour palette */
+:root {
+    --light0: #ffffff;
+    --light1: #8bc5bb;
+    --dark0: #121212;
+    --dark1: #282828;
+    --dark2: #3f3f3f;
+    
 }
 
-body .dark * {
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-} */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light1);
+    align-items: center;
+    color: var(--dark0);
+    }
+
+#navbar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+}
+
+#light-mode {
+    background-color: inherit;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+footer {
+    padding: 0.5rem;
+    background-color: var(--light1);
+    text-align: center;
+    font-weight: bolder;
+}
+
+h1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 50%;
+    margin: 1rem;
+    background-image: linear-gradient(var(--light1), var(--light0));
+    color: var(--dark1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+form * {
+    margin: 0.3rem;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+#blog {
+    font-size: 1.25em;
+    flex-grow: 1;
+}
+
+#blog div {
+    border: var(--dark2) 0.1rem solid;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+span {
+    font-style: italic;
+}
+
+input {
+    padding: 0.3rem;
+}
+
+textarea {
+    padding: 0.3rem;
+    resize: vertical;
+}
+
+/* Use media query so when the page changes to a size larger than mobile, the following css blocks execute */
+@media screen and (min-width: 768px) {
+    /* make nav bar flow as a row instead of column */
+    #navbar {
+        flex-direction: row;
+    }
+
+    /* make links flow as a row and add a gap */
+    #navbar ul {
+        flex-direction: row;
+        gap: 2em;
+        margin: 1em;
+    }
+
+    /* push nav bar to the left side of the screen whilst keeping the light mode button on the right */
+    #light-mode {
+        margin-left: auto;
+    }
+
+    /* make each section flow as a row instead of a column */
+    main {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.dark p, .dark span, .dark label, .dark a {
+    color: var(--light0);
+}
+
+.dark input, .dark textarea {
+    background-color: var(--dark2);
+    color: #ffffff;
+}
+
+.dark h2 {
+    color: var(--light1);
+}
+
+.dark main {
+    background-color: var(--dark0);
+}
+
+.dark #navbar, .dark footer {
+    background-color: var(--dark2);
+}
+
+.dark #blog div {
+    background-color: var(--dark1);
+}
