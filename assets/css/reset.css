@@ -16,12 +16,6 @@
     line-height: 1.5;
     font-family: sans-serif;
   }
-   
-  input, select, option, optgroup, textarea, button,
-  pre, code {
-    font-size: 100%;
-    font-family: inherit;
-  }
   
   ol, ul {
     list-style: none;
@@ -29,9 +23,15 @@
 
   a {
     text-decoration: none;
-    color: black;
+    color: #3f3f3f;
   }
 
   a:hover {
-    color: white;
+    color: #121212;
+  }
+
+  input, select, option, optgroup, textarea, button,
+  pre, code {
+    font-size: 100%;
+    font-family: inherit;
   }

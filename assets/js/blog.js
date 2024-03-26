@@ -1,5 +1,6 @@
 // Grab all the references to the DOM elements
 const blogPost = document.querySelector('#blog');
+const backBtn = document.querySelector(`#back`);
 
 // we need to store each blog post as an object in an array
 let blogStorageObject = [];
@@ -40,5 +41,14 @@ function init() {
     }
     renderBlogPosts();
 }
+
+// Waits for the submit button to be clicked
+backBtn.addEventListener(`click`, function (event) {
+    // prevent the page from refreshing  
+    event.preventDefault();
+    // replaces the current page with the form page.
+    window.location.assign(`index.html`);
+})
+
 
 init();
