@@ -12,7 +12,7 @@ function init() {
     // retrieves data from local storage
     const storeBlogs = JSON.parse(localStorage.getItem(`blogPosts`));
     // if there is data stored
-    if(storeBlogs) {
+    if(storeBlogs.length !== 0) {
         // then assign the value to js storage
         blogStorageObject = storeBlogs;
     }

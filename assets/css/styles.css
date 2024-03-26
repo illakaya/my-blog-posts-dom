@@ -50,6 +50,8 @@ main {
     display: flex;
     flex-direction: column-reverse;
     padding: 1rem;
+    /* Fills in the viewport height */
+    flex-grow: 1;
 }
 
 /* styled h1 as a circle, flexbox is used to align items and content to the center */
