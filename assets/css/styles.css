@@ -8,15 +8,18 @@
     
 }
 
+/* set font to a bunch of sans-serif fonts */
 * {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* made it display flex as I wanted the webpage to take the whole viewport rather than just taking up 50/75% of the viewport height */
 body {
     display: flex;
     flex-direction: column;
 }
 
+/* style navbar and made it display in a column when the screen size is small */
 #navbar {
     display: flex;
     flex-direction: column;
@@ -25,6 +28,7 @@ body {
     color: var(--dark0);
     }
 
+/* styled both the unordered list and the right side div as flexboxes that will display under each other on a small screen */
 #navbar ul, #navbar div {
     display: flex;
     flex-direction: column;
@@ -33,11 +37,7 @@ body {
     font-weight: bolder;
 }
 
-
-#back {
-    padding: 0.5rem;
-}
-
+/* styled the light-mode button to just look like the emoji */
 #light-mode {
     background-color: inherit;
     border: none;
@@ -45,13 +45,15 @@ body {
     padding: 0.5rem;
 }
 
+/* converted to a flex box that will display as a column on a small screen */
 main {
     display: flex;
     flex-direction: column-reverse;
     padding: 1rem;
-    flex-grow: 1;
 }
 
+/* styled h1 as a circle, flexbox is used to align items and content to the center */
+/* circle is created using 50% border radius and the circle is colored using an image that is gradient from top to bottom */
 h1 {
     display: flex;
     text-align: center;
@@ -67,6 +69,7 @@ h1 {
     box-shadow:  5px 5px 5px var(--light1);
 }
 
+/* style the footer */
 footer {
     padding: 0.5rem;
     background-color: var(--light1);
@@ -74,9 +77,11 @@ footer {
     font-weight: bolder;
 }
 
+/* styled the form */
 form {
     display: flex;
     flex-direction: column;
+    /* ensures that the inputs stretch across the page */
     flex-grow: 1;
 }
 
@@ -103,8 +108,10 @@ textarea {
     resize: vertical;
 }
 
+/* styled each of the blog posts that are generated */
 #blog {
     font-size: 1.25em;
+    /* ensures that the blog posts stretch across the page */
     flex-grow: 1;
 }
 
@@ -118,7 +125,7 @@ span {
     font-style: italic;
 }
 
-
+/* adjusts the colours of elements when dark-mode is toggled */
 .dark #navbar, .dark footer {
     background-color: var(--dark2);
 }

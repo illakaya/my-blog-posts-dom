@@ -1,4 +1,5 @@
 /* Took reset.css file from week 3 lesson 13 on typography */
+/* default style when the browser struggles to load the page */
 
 * {
     margin: 0;

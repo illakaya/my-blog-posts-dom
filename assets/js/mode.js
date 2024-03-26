@@ -1,4 +1,4 @@
-// Grab all the references to the DOM elements
+// Grab all the necessary references to the DOM elements
 const modeBtn = document.querySelector(`#light-mode`);
 const bodyEl = document.querySelector(`body`);
 
@@ -13,27 +13,38 @@ modeBtn.addEventListener('click', function() {
     if (mode === '☀️') {
         // set page to dark mode
         bodyEl.classList.add(`dark`);
-        // change text to moon
+        // change text to a moon
         modeBtn.textContent = `🌙`;
+        // set the stored value as moon
         mode = `🌙`;
     } else {
         // otherwise, set page to light mode
         bodyEl.classList.remove(`dark`);
-        // change text to sun
+        // change text to a sun
         modeBtn.textContent = `☀️`;
+        // set the stored value as sun
         mode = `☀️`;
     }
+    // puts stored value into the local storage
     pageMode = localStorage.setItem(`mode`, mode);
 });
 
+// initialisation function
 function init() {
+    // retrieve from the local storage the mode in which the user last preferred
     pageMode = localStorage.getItem(`mode`);
+    // if the mode was last a sun for light mode
     if (pageMode === '☀️') {
+        // remove the dark class
         bodyEl.classList.remove(`dark`);
+        // if the mode was last a moon for dark mode
     } else if (pageMode === '🌙') {
+        // add the dark class
         bodyEl.classList.add(`dark`);
+        // change the text to a moon
         modeBtn.textContent = `🌙`;
     }
 }
 
+// call the function to run when we start the application
 init();
